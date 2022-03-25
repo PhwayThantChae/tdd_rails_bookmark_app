@@ -103,7 +103,7 @@ jobs:
           POSTGRES_DB: tdd_rails_test
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
         run: |           
-          rspec
+          rails test
         
       - name: Create Coverage Artifact
         uses: actions/upload-artifact@v2
