@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'update bookmark', driver: :selenium_chrome, js: true, type: :system do
+RSpec.describe 'update bookmark', type: :system do
     # this will create a 'bookmark' method, before each scenario is ran
     let!(:bookmark) { Bookmark.create(url: 'https://rubyyagi.com', title: 'Ruby Yagi') }
 

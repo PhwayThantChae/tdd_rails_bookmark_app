@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'create bookmark', driver: :selenium_chrome, js: true, type: :system do
+RSpec.describe 'create bookmark', type: :system do
     scenario 'empty title and url' do
         visit new_bookmark_path
         click_button 'Create Bookmark'
