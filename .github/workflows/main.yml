@@ -40,7 +40,7 @@ jobs:
       - name: Setup Ruby 
         uses: ruby/setup-ruby@v1.70.1
         with:
-          ruby-version: 2.7.1
+          ruby-version: 2.7.5
       
       - name: Setup node
         uses: actions/setup-node@v1
@@ -119,7 +119,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1.70.1
         with:
-          ruby-version: 2.7.1
+          ruby-version: 2.7.5
 
       - name: Install Brakeman
         run: |

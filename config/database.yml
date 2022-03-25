@@ -10,6 +10,7 @@ default: &default
   timeout: 5000
   username: postgres
   password: root
+  port: 5432
 
 development:
   <<: *default
@@ -24,4 +25,9 @@ test:
 
 production:
   <<: *default
-  database: tdd_rails_bookmark_app_production
+  # database: tdd_rails_bookmark_app_production
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
