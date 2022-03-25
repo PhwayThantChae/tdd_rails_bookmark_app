@@ -245,6 +245,7 @@ DEPENDENCIES
   rails (~> 6.1.5)
   rspec-rails
   sass-rails (>= 6)
+  selenium-webdriver
   simplecov
   spring
   turbolinks (~> 5)
