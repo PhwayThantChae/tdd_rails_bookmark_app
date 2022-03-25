@@ -2,13 +2,13 @@
 
 require 'rails_helper'
 
-RSpec.describe 'update bookmark', type: :system do
+RSpec.describe 'update bookmark', driver: :selenium_chrome, js: true, type: :system do
     # this will create a 'bookmark' method, before each scenario is ran
     let!(:bookmark) { Bookmark.create(url: 'https://rubyyagi.com', title: 'Ruby Yagi') }
 
     scenario 'empty title and url' do
         visit bookmarks_path
-        click_link 'Edit'
+        click_link 'Edit', match: :first
         fill_in 'Title', with: ''
         fill_in 'Url', with: ''
 
@@ -23,7 +23,7 @@ RSpec.describe 'update bookmark', type: :system do
 
     scenario 'valid title and url' do
         visit bookmarks_path
-        click_link 'Edit'
+        click_link 'Edit', match: :first
         fill_in 'Title', with: 'Ruby Yagi'
         fill_in 'Url', with: 'https://rubyyagi.com'
 

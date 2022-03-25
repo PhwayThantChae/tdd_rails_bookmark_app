@@ -54,6 +54,12 @@ jobs:
       # - uses: Borales/actions-yarn@v2.3.0
       #   with: 
       #     cmd: install
+      - name: Gem cache
+        id: cache-bundle
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: bundle-${{ hashFiles('**/Gemfile.lock') }}
 
       - name: Install Dependencies 
         run: | 
