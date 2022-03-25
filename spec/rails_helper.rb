@@ -34,7 +34,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-Webdrivers::Chromedriver.required_version = "74.0.3729.6"
+Webdrivers::Chromedriver.required_version = "75.0.3770.80"
 
 Capybara.server = :puma, { Silent: true }
 
